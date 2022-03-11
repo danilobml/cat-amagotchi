@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat-amagotchi</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cat-amagotchi!</h1>
+    </header>
+    <main>
+        <div class="image"> 
+            <p id="name-tag"></p>
+            <img src="/src/images/cat.jpg" id = "your-cat" class="images" alt="Crazy Cat">
+        </div>
+        <div class="container">
+            <div class="name">
+                <form id="name-form">
+                    <label for="name-input">Name your new cat:</label>
+                    <input type="text" id="name-input">
+                    <input class= "name-button" type="submit" value="Create it!">
+                </form>    
+            </div>
+            <div class="levels">
+                <h2>How is your cat doing?</h2>
+                <p id="tiredness">Level of tiredness: </p>
+                <p id="hunger">Level of hunger: </p>
+                <p id="loneliness">Level of loneliness: </p>
+                <p id="happiness">Level of happiness: </p>
+            </div>
+            <div class="buttons">
+                <h2>Actions:</h2>
+                <button class="button" id="feed">Feed</button>
+                <button class="button" id="sleep">Let sleep</button>
+                <button class="button" id="pet">Pet the cat</button>
+                <button class="button" id="stay">Stay home</button>
+            </div>
+        </div>
+    </main>
+    <script src="/src/js/script.js"></script>
+</body>
+</html>

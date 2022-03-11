@@ -1,0 +1,110 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    
+    background-image: url("/src/images/background.jpg");
+}
+
+h1 {
+    width: fit-content;
+    margin-left: 1rem;
+    background-color: beige;
+    padding: 10px;
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 1rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: beige;
+    border-radius: 1.5rem;
+    padding: 0.8rem;
+    opacity: 0.9;
+}
+
+.images {
+    width: 340px;
+    min-width: 340px;
+    max-width: 340px;
+    height: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    margin: auto;
+    display: none;
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.levels .name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.image p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold; 
+    padding-right: 1rem;
+    background-color: beige;
+    opacity: 0.9;
+    border-radius: 0.5rem;
+}
+
+.button {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+    input {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+        padding: 20px;
+    }
+
+    .images {
+        width: 450px;
+        min-width: 450px;
+        max-width: 450px;
+        height: 400px;
+        min-height: 400px;
+        max-height: 400px;
+    }
+
+    label {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .levels {
+        font-size: 2rem;
+    }
+
+    .levels h2 {
+        font-size: 2.2rem;
+    }
+    
+    .image p {
+     font-size: 2rem;
+    }
+
+    .button {
+        width: 170px;
+        font-size: 1.4rem;
+    }
+}
