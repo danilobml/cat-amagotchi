@@ -1,3 +1,6 @@
+window.addEventListener('load', (event) => {
+    alert("You've been given the opportunity to adopt a sweet new male cat! Name him first, then take him home and do all the actions necessary to take good care of him...");
+});
 const imageCat = document.querySelector('#your-cat'); 
 const nameForm = document.getElementById('name-form');
 const nameInput = document.getElementById('name-input');
@@ -59,15 +62,15 @@ class Cat {
                 this._hunger = Math.floor(Math.random()*10);
                 showLevels();
             };
-            setTimeout(resetLevel, 10000);
+            setTimeout(resetLevel, 15000);
         } else if (this._hunger - random <= 5) {
             imageCat.src="/src/images/cat-happy.jpg";
-            alert(`You just fed ${this._name}. It was enough. He'll love you (until he's hungry again...)`);
+            alert(`You just fed ${this._name}. It was enough, so he'll love you (until he's hungry again...)`);
             this._hunger -= random;
         } else {
             this._hunger -= random;
             imageCat.src="/src/images/cat-mad.jpg"
-            alert(`You just fed ${this._name}. It wasn't enough. He'll steal all your snacks!`);
+            alert(`You just fed ${this._name}. It wasn't enough, so he'll steal all your snacks!`);
         }
     }
     sleep() {
@@ -80,17 +83,16 @@ class Cat {
                 this._tiredness = Math.floor(Math.random()*10);
                 showLevels();
             };
-            setTimeout(resetLevel, 10000);
+            setTimeout(resetLevel, 15000);
         } else if (this._tiredness - random >= 5) {
             imageCat.src="/src/images/cat-bored.jpg"
-            alert(`${this._name} slept very little (for his taste). He'll be grumpy, and probably scratch your sofa into oblivion!`);
+            alert(`${this._name} slept very little (for his taste), so he'll be grumpy, and probably scratch your sofa into oblivion!`);
             this._tiredness -= random;
         } else {
             imageCat.src="/src/images/cat-happy.jpg";
             this._tiredness -= random;
-            alert(`${this._name} slept long hours. He'll be sweet and purry.`);
+            alert(`${this._name} slept long hours, so he'll be sweet and purry.`);
         }
-
     }
     pet() {
         const random = Math.floor(Math.random()*10);
@@ -102,15 +104,15 @@ class Cat {
                 this._happiness = Math.floor(Math.random()*10);
                 showLevels();
             };
-            setTimeout(resetLevel, 10000);
+            setTimeout(resetLevel, 15000);
         } else if (this._happiness + random >= 5) {
             imageCat.src="/src/images/cat-mad.jpg"
-            alert(`You pet ${this._name}. He didn't want to be touched. Now, he looks at you and thinks: get off my case!`);
+            alert(`You pet ${this._name}, he didn't want to be touched. Now, he looks at you and thinks: get off my case!`);
             this._happiness += random;
         } else {
             imageCat.src="/src/images/cat-happy.jpg";
             this._happiness += random;
-            alert(`You pet ${this._name}. He feels loved. Now, he looks at you and thinks: you are still ok, human!`);
+            alert(`You pet ${this._name}, he feels loved. Now, he looks at you and thinks: you are still ok, human!`);
         }
     }
     stayHome() {
@@ -123,7 +125,7 @@ class Cat {
                 this._loneliness = Math.floor(Math.random()*10);
                 showLevels();
             };
-            setTimeout(resetLevel, 10000);
+            setTimeout(resetLevel, 15000);
         } else if (this._loneliness - random >= 5) {
             imageCat.src="/src/images/cat-bored.jpg";
             alert(`${this._name} is sick and tired of seeing your face. Give him some space, or get scratched!`);
@@ -179,6 +181,12 @@ stayButton.addEventListener('click', clickStay);
 
 nameButton.addEventListener('click', create);
 
+const resetLevels = () => {
+    newCat.tiredness = 5 + (Math.floor(Math.random()*5));
+    newCat.hunger = 5 + (Math.floor(Math.random()*5));
+    newCat.loneliness = 5 + (Math.floor(Math.random()*5));
+    newCat.happiness = 5 - (Math.floor(Math.random()*5));
+    showLevels();
+}
 
-
-
+setInterval(resetLevels, 120000);
