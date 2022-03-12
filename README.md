@@ -1,4 +1,6 @@
-# cat-amagotchi
+# Cat-amagotchi
+
+Live site: https://danilobml.github.io/cat-amagotchi/
 
 A tiny, fun project to practice some object-oriented programming in JavaScript.
 
