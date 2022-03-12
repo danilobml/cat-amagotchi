@@ -37,7 +37,7 @@ main {
     max-height: 300px;
     margin: auto;
     display: none;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 label {
@@ -58,7 +58,7 @@ label {
     background-color: beige;
     opacity: 0.9;
     border-radius: 0.5rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .button {
