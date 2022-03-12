@@ -55,7 +55,7 @@ class Cat {
     feed() {
         const random = Math.floor(Math.random()*10);
         if(this._hunger - random <= 0){
-            imageCat.src="/src/images/cat-toomuch.jpg";
+            imageCat.src="./src/images/cat-toomuch.jpg";
             alert(`${this._name} had enough to eat. Leave him alone!`)
             this._hunger = 0;
             const resetLevel = () => {
@@ -64,19 +64,19 @@ class Cat {
             };
             setTimeout(resetLevel, 15000);
         } else if (this._hunger - random <= 5) {
-            imageCat.src="/src/images/cat-happy.jpg";
+            imageCat.src="./src/images/cat-happy.jpg";
             alert(`You just fed ${this._name}. It was enough, so he'll love you (until he's hungry again...)`);
             this._hunger -= random;
         } else {
             this._hunger -= random;
-            imageCat.src="/src/images/cat-mad.jpg"
+            imageCat.src="./src/images/cat-mad.jpg"
             alert(`You just fed ${this._name}. It wasn't enough, so he'll steal all your snacks!`);
         }
     }
     sleep() {
         const random = Math.floor(Math.random()*10);
         if(this._tiredness - random <= 0){
-            imageCat.src="/src/images/cat-slept.jpg";
+            imageCat.src="./src/images/cat-slept.jpg";
             alert(`${this._name} slept too much. Leave him alone!`)
             this._tiredness = 0;
             const resetLevel = () => {
@@ -85,11 +85,11 @@ class Cat {
             };
             setTimeout(resetLevel, 15000);
         } else if (this._tiredness - random >= 5) {
-            imageCat.src="/src/images/cat-bored.jpg"
+            imageCat.src="./src/images/cat-bored.jpg"
             alert(`${this._name} slept very little (for his taste), so he'll be grumpy, and probably scratch your sofa into oblivion!`);
             this._tiredness -= random;
         } else {
-            imageCat.src="/src/images/cat-happy.jpg";
+            imageCat.src="./src/images/cat-happy.jpg";
             this._tiredness -= random;
             alert(`${this._name} slept long hours, so he'll be sweet and purry.`);
         }
@@ -97,7 +97,7 @@ class Cat {
     pet() {
         const random = Math.floor(Math.random()*10);
         if(this._happiness + random >= 10){
-            imageCat.src="/src/images/cat-fully.jpg";
+            imageCat.src="./src/images/cat-fully.jpg";
             alert(`${this._name} is fully happy. Leave him alone!`);
             this._happiness = 10;
             const resetLevel = () => {
@@ -106,11 +106,11 @@ class Cat {
             };
             setTimeout(resetLevel, 15000);
         } else if (this._happiness + random >= 5) {
-            imageCat.src="/src/images/cat-mad.jpg"
+            imageCat.src="./src/images/cat-mad.jpg"
             alert(`You pet ${this._name}, he didn't want to be touched. Now, he looks at you and thinks: get off my case!`);
             this._happiness += random;
         } else {
-            imageCat.src="/src/images/cat-happy.jpg";
+            imageCat.src="./src/images/cat-happy.jpg";
             this._happiness += random;
             alert(`You pet ${this._name}, he feels loved. Now, he looks at you and thinks: you are still ok, human!`);
         }
@@ -118,7 +118,7 @@ class Cat {
     stayHome() {
         const random = Math.floor(Math.random()*10);
         if(this._loneliness - random <= 0){
-            imageCat.src="/src/images/cat-abandoned.jpg";
+            imageCat.src="./src/images/cat-abandoned.jpg";
             alert(`${this._name} is good on his own. Leave him alone!`)
             this._loneliness = 0;
             const resetLevel = () => {
@@ -127,11 +127,11 @@ class Cat {
             };
             setTimeout(resetLevel, 15000);
         } else if (this._loneliness - random >= 5) {
-            imageCat.src="/src/images/cat-bored.jpg";
+            imageCat.src="./src/images/cat-bored.jpg";
             alert(`${this._name} is sick and tired of seeing your face. Give him some space, or get scratched!`);
             this._loneliness -= random;
         } else {
-            imageCat.src="/src/images/cat-cuddly.jpeg";
+            imageCat.src="./src/images/cat-cuddly.jpeg";
             this._loneliness -= random;
             alert(`${this._name} felt abandoned, and now lovingly sits on your lap.`);
         }
@@ -189,4 +189,4 @@ const resetLevels = () => {
     showLevels();
 }
 
-setInterval(resetLevels, 120000);
+setInterval(resetLevels, 60000);

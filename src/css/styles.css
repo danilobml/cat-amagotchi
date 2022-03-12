@@ -1,8 +1,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    
-    background-image: url("/src/images/background.jpg");
+    background-image: url("../images/background.jpg");
 }
 
 h1 {
